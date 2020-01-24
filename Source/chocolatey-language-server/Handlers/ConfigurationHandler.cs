@@ -1,21 +1,14 @@
-using Chocolatey.Language.Server.CustomProtocol;
-using Chocolatey.Language.Server.Engine;
-using Chocolatey.Language.Server.Extensions;
-using Chocolatey.Language.Server.Handlers;
-using OmniSharp.Extensions.Embedded.MediatR;
-using OmniSharp.Extensions.JsonRpc;
-using OmniSharp.Extensions.LanguageServer;
-using OmniSharp.Extensions.LanguageServer.Protocol;
-using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
-using OmniSharp.Extensions.LanguageServer.Protocol.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using Serilog;
-using Serilog.Events;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Chocolatey.Language.Server.CustomProtocol;
+using Chocolatey.Language.Server.Engine;
+using Chocolatey.Language.Server.Extensions;
+using MediatR;
+using Newtonsoft.Json;
+using OmniSharp.Extensions.LanguageServer.Protocol;
+using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
+using Serilog;
 
 namespace Chocolatey.Language.Server.Handlers
 {

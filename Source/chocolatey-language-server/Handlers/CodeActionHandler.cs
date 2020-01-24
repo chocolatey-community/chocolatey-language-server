@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
+using OmniSharp.Extensions.LanguageServer.Protocol;
 using OmniSharp.Extensions.LanguageServer.Protocol.Client.Capabilities;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using OmniSharp.Extensions.LanguageServer.Protocol.Server;
@@ -14,9 +15,9 @@ namespace Chocolatey.Language.Server.Handlers
     {
         private CodeActionCapability _capability;
 
-        public TextDocumentRegistrationOptions GetRegistrationOptions()
+        public CodeActionRegistrationOptions GetRegistrationOptions()
         {
-            return new TextDocumentRegistrationOptions
+            return new CodeActionRegistrationOptions
             {
                 DocumentSelector = new DocumentSelector(new DocumentFilter { Pattern = "**/*.nuspec" } )
             };
@@ -49,5 +50,6 @@ namespace Chocolatey.Language.Server.Handlers
         {
             _capability = capability;
         }
+
     }
 }
