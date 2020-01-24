@@ -95,6 +95,16 @@
         /// <value>The value of the element.</value>
         public TValue Value { get; set; }
 
+        public static implicit operator MetaValue<TValue>(TValue value)
+        {
+            if (value is null)
+            {
+                return new MetaValue<TValue>();
+            }
+
+            return new MetaValue<TValue>(value);
+        }
+
         /// <summary>
         /// Performs an implicit conversion from <see
         /// cref="T:Chocolatey.Language.Server.Models.MetaValue`1"/> to <see cref="T:Chocolatey.Language.Server.Models.MetaValue`1.TValue"/>.
@@ -103,7 +113,7 @@
         /// <returns>The value of the conversion of the specified meta value class.</returns>
         public static implicit operator TValue(MetaValue<TValue> metaValue)
         {
-            if (metaValue == null)
+            if (metaValue is null)
             {
                 return default;
             }
