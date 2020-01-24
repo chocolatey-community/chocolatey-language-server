@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>chocolatey_language_server.Tests</RootNamespace>
-    <LangVersion>latest</LangVersion>
+    <RootNamespace>Chocolatey.Language.Server.Tests</RootNamespace>
+    <LangVersion>8.0</LangVersion>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
