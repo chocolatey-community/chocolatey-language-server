@@ -19,7 +19,7 @@ ToolSettings.SetToolSettings(context: Context,
                             dupFinderExcludePattern: new string[] {
                             BuildParameters.RootDirectoryPath + "/Source/chocolatey-language-server.Tests/*.cs",
                             BuildParameters.RootDirectoryPath + "/Source/chocolatey-language-server/**/*.AssemblyInfo.cs" },
-                            testCoverageFilter: "+[*]* -[xunit.*]* -[Cake.Core]* -[Cake.Testing]* -[*.Tests]* ",
+                            testCoverageFilter: "+[chocolatey-language-server]* -[*.Tests]* ",
                             testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
                             testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
 
