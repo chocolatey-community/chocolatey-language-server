@@ -19,14 +19,14 @@ namespace Chocolatey.Language.Server
             var options = new LanguageServerOptions()
                 .WithInput(Console.OpenStandardInput())
                 .WithOutput(Console.OpenStandardOutput())
-                .WithLoggerFactory(new LoggerFactory())
-                .AddDefaultLoggingProvider()
-                .WithMinimumLogLevel(LogLevel.Trace)
+                .ConfigureLogging(x => x
+                        .AddLanguageServer().SetMinimumLevel(LogLevel.Trace))
                 .WithServices(ConfigureServices)
                 .WithHandler<TextDocumentSyncHandler>()
                 .WithHandler<CodeActionHandler>()
                 .WithHandler<ConfigurationHandler>()
-                .OnInitialize((s, _) => {
+                .OnInitialize((s, _) =>
+                {
                     var serviceProvider = (s as LanguageServer).Services;
                     var bufferManager = serviceProvider.GetService<BufferManager>();
                     var diagnosticsHandler = serviceProvider.GetService<DiagnosticsHandler>();
