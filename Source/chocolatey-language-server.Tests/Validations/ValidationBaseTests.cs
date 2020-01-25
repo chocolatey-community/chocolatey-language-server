@@ -4,6 +4,7 @@ using Chocolatey.Language.Server.Validations;
 using NUnit.Framework;
 using OmniSharp.Extensions.LanguageServer.Protocol.Models;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -94,12 +95,12 @@ namespace Chocolatey.Language.Server.Tests.Validations
             Assert.That(Rule.DocumentationUrl, Is.EqualTo(ExpectedDocumentationUrl));
         }
 
-        protected void ValidateDiagnosticResult(Package package, int expectedResults)
+        protected IEnumerable<Diagnostic> ValidateDiagnosticResult(Package package, int expectedResults)
         {
-            ValidateDiagnosticResult(package, expectedResults, ExpectedSeverity);
+            return ValidateDiagnosticResult(package, expectedResults, ExpectedSeverity);
         }
 
-        protected void ValidateDiagnosticResult(Package package, int expectedResults, DiagnosticSeverity expectedSeverity)
+        protected IEnumerable<Diagnostic> ValidateDiagnosticResult(Package package, int expectedResults, DiagnosticSeverity expectedSeverity)
         {
             var result = Rule.Validate(package).ToList();
 
@@ -107,6 +108,8 @@ namespace Chocolatey.Language.Server.Tests.Validations
             Assert.That(result, Has.All.Property(nameof(Diagnostic.Severity)).EqualTo(expectedSeverity));
             Assert.That(result, Has.All.Property(nameof(Diagnostic.Code)).EqualTo((DiagnosticCode)ExpectedId));
             Assert.That(result, Has.All.Property(nameof(Diagnostic.Source)).EqualTo("chocolatey"));
+
+            return result;
         }
     }
 }
