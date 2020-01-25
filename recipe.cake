@@ -9,6 +9,9 @@ BuildParameters.SetParameters(context: Context,
                             repositoryOwner: "chocolatey-community",
                             repositoryName: "chocolatey-language-server",
                             appVeyorAccountName: "chocolateycommunity",
+                            shouldRunDupFinder: false, // Unable to run dupFinder due to not finding some kind of external annotations file
+                            shouldRunInspectCode: false, // Same reason as dupe finder
+                            shouldRunCodecov: true,
                             shouldRunGitVersion: true,
                             shouldRunDotNetCorePack: true,
                             shouldDeployGraphDocumentation: false);
