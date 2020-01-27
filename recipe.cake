@@ -10,7 +10,8 @@ BuildParameters.SetParameters(context: Context,
                             repositoryName: "chocolatey-language-server",
                             appVeyorAccountName: "chocolateycommunity",
                             shouldRunGitVersion: true,
-                            shouldRunDotNetCorePack: true);
+                            shouldRunDotNetCorePack: true,
+                            shouldDeployGraphDocumentation: false);
 
 BuildParameters.PrintParameters(Context);
 
