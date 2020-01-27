@@ -41,10 +41,3 @@ branches:
 #---------------------------------#
 cache:
 - tools -> recipe.cake, tools/packages.config
-
-#---------------------------------#
-#  Skip builds for doc changes    #
-#---------------------------------#
-skip_commits:
-  # Regex for matching commit message
-  message: /\(doc\).*/
