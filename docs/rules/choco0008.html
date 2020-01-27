@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/chocolatey-language-server/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/chocolatey-language-server/assets/img/favicon.ico" type="image/x-icon">
-        <title>chocolatey-language-server - Chocolatey Language Server Protocol Implementation</title>
+        <title>chocolatey-language-server - LicenseUrl Is Empty When Requiring License Acceptance</title>
         <link href="/chocolatey-language-server/assets/css/highlight.css" rel="stylesheet">
         <link href="/chocolatey-language-server/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/chocolatey-language-server/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -31,9 +31,9 @@
 
         
     </head>
-    <body class="hold-transition wyam layout-boxed layout-top-nav no-gutter">    
+    <body class="hold-transition wyam layout-boxed  ">    
         <div class="top-banner"></div>
-        <div class="wrapper">
+        <div class="wrapper with-container">
             <!-- Header -->
             <header class="main-header">   
                      
@@ -43,6 +43,10 @@
                          
                 <nav class="navbar navbar-static-top" role="navigation">
                     <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
                                         
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
@@ -54,7 +58,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
-                                    <li><a href="/chocolatey-language-server/docs">Docs</a></li>
+                                    <li class="active"><a href="/chocolatey-language-server/docs">Docs</a></li>
         <li><a href="/chocolatey-language-server/api">API</a></li>
  
                         </ul>       
@@ -66,10 +70,10 @@
             </header>
             
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="main-sidebar hidden">
+            <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-        <div><p><a href="https://github.com/chocolatey-community/chocolatey-language-server/tree/develop/docs/input/index.cshtml"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
+        <div><p><a href="https://github.com/chocolatey-community/chocolatey-language-server/tree/develop/docs/input/docs/rules/choco0008.md"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></p></div>
     <div id="infobar-headings"></div>
 
                 </section>
@@ -79,6 +83,37 @@
 
                     <ul class="sidebar-menu">
                         
+
+                <li class="treeview active">
+                    <a href="/chocolatey-language-server/docs/rules">Rules</a> <a href="#" class="expand"></a>
+                    <ul class="treeview-menu">
+                        
+            <li class="header">Guidelines</li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco1001">Description minimum character count</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco1002">SSL capable URL</a></li>
+            <li class="header">Notes</li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco3001">Package Id Uses Underscores</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco3002">AuthorDoesNotMatchMaintainer</a></li>
+            <li class="header">Requirements</li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0001">Nuspec does not contain templated values</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0002">Description Is Empty</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0003">Description maximum character count</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0004">Invalid URL Provided</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0005">Nuspec contains email address</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0006">Copyright Character Count Minimum</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0007">DeprecatedPackagesMustHaveADependency</a></li>
+                <li class="selected"><a href="/chocolatey-language-server/docs/rules/choco0008">LicenseUrl Is Empty When Requiring License Acceptance</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0009">PackageIdDoesNotEndWithConfig</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0010">PrereleaseVersionAsPartOfPackageId</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0011">ProjectUrl Is Empty</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0012">Tags Found With Commas</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco0013">Tags Are Missing</a></li>
+            <li class="header">Suggestions</li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco2001">Nuspec Enhancements Missing</a></li>
+                <li><a href="/chocolatey-language-server/docs/rules/choco2002">Use Png Or Svg For Package Icons</a></li>
+
+                    </ul>
+                </li>
 
                     </ul>
                             
@@ -91,16 +126,26 @@
 
 
 
-
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-4">Chocolatey Language Server Protocol Implemenation</h1>
-        <p>
-            Providing rules for inspecting Chocolatey Packaging files in Visual Studio Code and Visual Studio.<br/>
-        </p>
-        <a class="btn btn-primary btn-lg" href="docs" role="button">Learn more</a>
-    </div>
+		<section class="content-header">
+			<h1>LicenseUrl Is Empty When Requiring License Acceptance</h1>
+		</section>
+	<section class="content">
+		<div class="alert alert-warning"><p><strong>Preliminary Notice</strong>
+This rule is not yet available in chocolatey-vscode.
+It is a planned rule for 0.8.0.</p>
 </div>
+<h2 id="issue">Issue</h2>
+<p>In the nuspec, there is a <code>&lt;licenseUrl&gt;</code> element. It was found to be missing or empty in the package.</p>
+<h2 id="recommended-solution">Recommended Solution</h2>
+<p>Please update the nuspec to include a <code>&lt;licenseUrl /&gt;</code> element that is non-empty. If your nuspec file is missing this field, you should use the <code>Chocolatey: Create new Chocolatey package</code> command with the default template.</p>
+<h2 id="reasoning">Reasoning</h2>
+<p>If you want to require license acceptance, you must include the license url.</p>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="https://github.com/chocolatey/package-validator/wiki/LicenseUrlMissingWhenLicenseAcceptanceTrue" target="_blank">Package validator rule</a></li>
+</ul>
+
+	</section>
                 
             </div>           
             
