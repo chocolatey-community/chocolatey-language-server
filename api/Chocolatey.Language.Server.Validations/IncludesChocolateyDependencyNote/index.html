@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/chocolatey-language-server/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/chocolatey-language-server/assets/img/favicon.ico" type="image/x-icon">
-        <title>chocolatey-language-server - API - INuspecRule Interface</title>
+        <title>chocolatey-language-server - API - IncludesChocolateyDependencyNote Class</title>
         <link href="/chocolatey-language-server/assets/css/highlight.css" rel="stylesheet">
         <link href="/chocolatey-language-server/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/chocolatey-language-server/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -75,6 +75,7 @@
 <p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
+<p><a href="#SeeAlso">See Also</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -146,7 +147,7 @@
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionRequiredValidation">Description<wbr>Required<wbr>Validation</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DoesNotContainTemplatedValues">Does<wbr>Not<wbr>Contain<wbr>Templated<wbr>Values</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IconUrlShouldUsePngOrSvg">Icon<wbr>Url<wbr>Should<wbr>Use<wbr>Png<wbr>Or<wbr>Svg</a></li>
-				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote">Includes<wbr>Chocolatey<wbr>Dependency<wbr>Note</a></li>
+				<li class="selected"><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote">Includes<wbr>Chocolatey<wbr>Dependency<wbr>Note</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/LicenseUrlMissingWhenLicenseAcceptanceTrue">License<wbr>Url<wbr>Missing<wbr>When<wbr>License<wbr>Acceptance<wbr>True</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecEnhancementsValidation">Nuspec<wbr>Enhancements<wbr>Validation</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase">NuspecRuleBase</a></li>
@@ -159,7 +160,7 @@
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlSslCapable">UrlSslCapable</a></li>
 				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlValidValidation">UrlValidValidation</a></li>
 			<li class="header">Interface Types</li>
-				<li class="selected"><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule">INuspecRule</a></li>
+				<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule">INuspecRule</a></li>
 
 
                     </ul>
@@ -174,14 +175,15 @@
 
 
 <section class="content-header">
-	<h1>INuspecRule <small>Interface</small></h1>
+	<h1>Includes<wbr>Chocolatey<wbr>Dependency<wbr>Note <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-    Interface used to define common methods used when validation a nuspec file.
+    Runs validation of the current nuspec to verify the dependency on the
+    chocolatey package ID.
     </div>
 
 		<div class="panel panel-default">
@@ -193,84 +195,34 @@
 								<dt>Namespace</dt>
 								<dd><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations">Chocolatey<wbr>.Language<wbr>.Server<wbr>.Validations</a></dd>
 											
-							
-							
-							
-								<dt>Implementing Types</dt>
+								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/ProjectUrlNotEmpty">ProjectUrlNotEmpty</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PrereleaseVersionAsPartOfPackageId">Prerelease<wbr>Version<wbr>As<wbr>Part<wbr>Of<wbr>Package<wbr>Id</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DoesNotContainTemplatedValues">Does<wbr>Not<wbr>Contain<wbr>Templated<wbr>Values</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionMinimumWordCount">Description<wbr>Minimum<wbr>Word<wbr>Count</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PackageIdUsesUnderscores">Package<wbr>Id<wbr>Uses<wbr>Underscores</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IconUrlShouldUsePngOrSvg">Icon<wbr>Url<wbr>Should<wbr>Use<wbr>Png<wbr>Or<wbr>Svg</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/LicenseUrlMissingWhenLicenseAcceptanceTrue">License<wbr>Url<wbr>Missing<wbr>When<wbr>License<wbr>Acceptance<wbr>True</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecEnhancementsValidation">Nuspec<wbr>Enhancements<wbr>Validation</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionRequiredValidation">Description<wbr>Required<wbr>Validation</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote">Includes<wbr>Chocolatey<wbr>Dependency<wbr>Note</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionMaximumWordCount">Description<wbr>Maximum<wbr>Word<wbr>Count</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlValidValidation">UrlValidValidation</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PackageIdDoesNotEndWithConfig">Package<wbr>Id<wbr>Does<wbr>Not<wbr>End<wbr>With<wbr>Config</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/TagsNotEmpty">TagsNotEmpty</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DeprecatedPackagesShouldHaveDependency">Deprecated<wbr>Packages<wbr>Should<wbr>Have<wbr>Dependency</a></li>								
+											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule">INuspecRule</a></li>								
+									</ul>
+								</dd>
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>object</li>								
 											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase">NuspecRuleBase</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/CopyrightWordCount">CopyrightWordCount</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/AuthorDoesNotMatchMaintainer">Author<wbr>Does<wbr>Not<wbr>Match<wbr>Maintainer</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlSslCapable">UrlSslCapable</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/CopyrightAndAuthorFieldShouldntContainEmailRequirement">Copyright<wbr>And<wbr>Author<wbr>Field<wbr>Shouldnt<wbr>Contain<wbr>Email<wbr>Requirement</a></li>								
-											<li><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/TagsAreSpaceSeparated">Tags<wbr>Are<wbr>Space<wbr>Separated</a></li>								
 									</ul>
 								</dd>				
+							
+							
 						</dl>
 					</div>		
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type["INuspecRule"]
+	Type--&gt;Base0["NuspecRuleBase"]
+	click Base0 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase"
+	Base0--&gt;Base1["object"]
+	Type-.-&gt;Interface0["INuspecRule"]
+	click Interface0 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule"
+	Type["IncludesChocolateyDependencyNote"]
 class Type type-node
-	Implementing0["ProjectUrlNotEmpty"]-.-&gt;Type
-	click Implementing0 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/ProjectUrlNotEmpty"
-	Implementing1["PrereleaseVersionAsPartOfPackageId"]-.-&gt;Type
-	click Implementing1 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PrereleaseVersionAsPartOfPackageId"
-	Implementing2["DoesNotContainTemplatedValues"]-.-&gt;Type
-	click Implementing2 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DoesNotContainTemplatedValues"
-	Implementing3["DescriptionMinimumWordCount"]-.-&gt;Type
-	click Implementing3 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionMinimumWordCount"
-	Implementing4["PackageIdUsesUnderscores"]-.-&gt;Type
-	click Implementing4 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PackageIdUsesUnderscores"
-	Implementing5["IconUrlShouldUsePngOrSvg"]-.-&gt;Type
-	click Implementing5 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IconUrlShouldUsePngOrSvg"
-	Implementing6["LicenseUrlMissingWhenLicenseAcceptanceTrue"]-.-&gt;Type
-	click Implementing6 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/LicenseUrlMissingWhenLicenseAcceptanceTrue"
-	Implementing7["NuspecEnhancementsValidation"]-.-&gt;Type
-	click Implementing7 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecEnhancementsValidation"
-	Implementing8["DescriptionRequiredValidation"]-.-&gt;Type
-	click Implementing8 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionRequiredValidation"
-	Implementing9["IncludesChocolateyDependencyNote"]-.-&gt;Type
-	click Implementing9 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote"
-	Implementing10["DescriptionMaximumWordCount"]-.-&gt;Type
-	click Implementing10 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DescriptionMaximumWordCount"
-	Implementing11["UrlValidValidation"]-.-&gt;Type
-	click Implementing11 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlValidValidation"
-	Implementing12["PackageIdDoesNotEndWithConfig"]-.-&gt;Type
-	click Implementing12 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/PackageIdDoesNotEndWithConfig"
-	Implementing13["TagsNotEmpty"]-.-&gt;Type
-	click Implementing13 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/TagsNotEmpty"
-	Implementing14["DeprecatedPackagesShouldHaveDependency"]-.-&gt;Type
-	click Implementing14 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/DeprecatedPackagesShouldHaveDependency"
-	Implementing15["NuspecRuleBase"]-.-&gt;Type
-	click Implementing15 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase"
-	Implementing16["CopyrightWordCount"]-.-&gt;Type
-	click Implementing16 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/CopyrightWordCount"
-	Implementing17["AuthorDoesNotMatchMaintainer"]-.-&gt;Type
-	click Implementing17 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/AuthorDoesNotMatchMaintainer"
-	Implementing18["UrlSslCapable"]-.-&gt;Type
-	click Implementing18 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/UrlSslCapable"
-	Implementing19["CopyrightAndAuthorFieldShouldntContainEmailRequirement"]-.-&gt;Type
-	click Implementing19 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/CopyrightAndAuthorFieldShouldntContainEmailRequirement"
-	Implementing20["TagsAreSpaceSeparated"]-.-&gt;Type
-	click Implementing20 "/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/TagsAreSpaceSeparated"
 
 						</div>
 					</div>
@@ -279,7 +231,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public interface INuspecRule</code></pre>
+	<pre><code>public sealed class IncludesChocolateyDependencyNote : NuspecRuleBase, INuspecRule</code></pre>
 
 
 
@@ -302,24 +254,31 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule/AF77EFF4">DocumentationUrl</a></td>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase/157C4ED2">DocumentationUrl</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+    Gets the documentation Url for the rule
+    </div>
+											<div><small><em>Inherited from <a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase">NuspecRuleBase</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule/EC912E8A">Id</a></td>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote/E2ED01A1">Id</a></td>
 								<td>string</td>
 								<td>
-									<div></div>
+									<div>
+    Gets the string Id for the rule, similar to CHOCO0001
+    </div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule/8459DCD0">ValidationType</a></td>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote/8D0E2773">ValidationType</a></td>
 								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server/ValidationType">ValidationType</a></td>
 								<td>
-									<div></div>
+									<div>
+    Gets the type of of validation
+    </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -339,12 +298,31 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/INuspecRule/F2C5EF03">Validate<wbr>(Package)<wbr></a></td>
-								<td>IEnumerable<wbr>&lt;Diagnostic&gt;<wbr></td>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase/939AEFC9">CreateDiagnostic<wbr>(int, <wbr>int, <wbr>string)<wbr></a></td>
+								<td>Diagnostic</td>
 								<td>
 									<div>
-    Runs validation of the current nuspec file by using the specified <span name="syntaxTree" class="paramref">syntaxTree</span>.
+    Creates a single diagnostic with the specified <span name="severity" class="paramref">severity</span>.
     </div>
+											<div><small><em>Inherited from <a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase">NuspecRuleBase</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase/FC251CB6">CreateDiagnostic<wbr>(MetaValue, <wbr>string, <wbr>bool)<wbr></a></td>
+								<td>Diagnostic</td>
+								<td>
+									<div>
+    Creates a single diagnostic with the specified <span name="severity" class="paramref">severity</span> using the
+    specified <span name="metaValue" class="paramref">metaValue</span>.
+    </div>
+											<div><small><em>Inherited from <a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/NuspecRuleBase">NuspecRuleBase</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/chocolatey-language-server/api/Chocolatey.Language.Server.Validations/IncludesChocolateyDependencyNote/A2DBDBAC">Validate<wbr>(Package)<wbr></a></td>
+								<td>IEnumerable<wbr>&lt;Diagnostic&gt;<wbr></td>
+								<td>
+									<div></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -353,6 +331,10 @@ class Type type-node
 		
 
 
+	<h1 id="SeeAlso">See Also</h1>
+	<ul class="list-unstyled">
+			<li><a href="https://github.com/chocolatey/package-validator/blob/master/src/chocolatey.package.validator/infrastructure.app/rules/IncludesChocolateyDependencyNote.cs">Package validator note for taking a dependency on Chocolatey.</a></li>
+	</ul>
 
 	
 </section>
