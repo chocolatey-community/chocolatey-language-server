@@ -19,6 +19,8 @@ Codecov global executable uploader for PowerShell and .NET applications/librarie
     <tags>coverage codecov</tags>
   </metadata>
   <files>
-    <file src="../../BuildArtifacts/temp/Native/win-x64/*" target="tools" />
+    <!-- Must use '\' on windows platforms when using globbing -->
+    <!-- May need to change to '/' for unix platforms -->
+    <file src="..\..\BuildArtifacts\temp\Native\win-x64\*" target="tools" />
   </files>
 </package>
