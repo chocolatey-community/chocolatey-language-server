@@ -18,9 +18,4 @@ Codecov global executable uploader for PowerShell and .NET applications/librarie
     <releaseNotes>All release notes for Codecov can be found on the GitHub site - https://github.com/codecov/codecov-exe/releases/tag/$version$</releaseNotes>
     <tags>coverage codecov</tags>
   </metadata>
-  <files>
-    <!-- Must use '\' on windows platforms when using globbing -->
-    <!-- May need to change to '/' for unix platforms -->
-    <file src="..\..\BuildArtifacts\temp\Native\win-x64\*" target="tools" />
-  </files>
 </package>

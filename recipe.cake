@@ -61,6 +61,44 @@ Task("DotNetCore-Publish")
     }
 });
 
+((CakeTask)BuildParameters.Tasks.CreateNuGetPackagesTask.Task).Actions.Clear();
+
+BuildParameters.Tasks.CreateNuGetPackagesTask.Does(() =>
+{
+    var nuspecFiles = GetFiles(BuildParameters.Paths.Directories.NugetNuspecDirectory + "/**/*.nuspec");
+
+    EnsureDirectoryExists(BuildParameters.Paths.Directories.NuGetPackages);
+
+    foreach (var nuspecFile in nuspecFiles)
+    {
+        foreach (var runtime in NativeRuntimes)
+        {
+            var runtimeName = runtime.Value;
+            var baseDirectory = BuildParameters.Paths.Directories.TempBuild.Combine("Native").Combine(runtimeName);
+            if (!DirectoryExists(baseDirectory))
+            {
+                Warning("Published directory for " + runtimeName + "Does not exist");
+                continue;
+            }
+
+            NuGetPack(nuspecFile, new NuGetPackSettings
+            {
+                Id = nuspecFile.GetFilenameWithoutExtension() + ".Runtime." + runtimeName,
+                Version = BuildParameters.Version.SemVersion,
+                BasePath = baseDirectory,
+                OutputDirectory = BuildParameters.Paths.Directories.NuGetPackages,
+                Symbols = false,
+                NoPackageAnalysis = true,
+                Files = GetFiles(baseDirectory + "/*").Select(f => new NuSpecContent
+                    {
+                        Source = f.FullPath,
+                        Target = string.Format("tools/{0}/{1}", runtimeName, f.GetFilename())
+                    }).ToList()
+            });
+        }
+    }
+});
+
 
 
 Build.RunDotNetCore();
