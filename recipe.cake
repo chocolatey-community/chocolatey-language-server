@@ -23,4 +23,44 @@ ToolSettings.SetToolSettings(context: Context,
                             testCoverageExcludeByAttribute: "*.ExcludeFromCodeCoverage*",
                             testCoverageExcludeByFile: "*/*Designer.cs;*/*.g.cs;*/*.g.i.cs");
 
+var NativeRuntimes = new Dictionary<PlatformFamily, string>
+{
+    [PlatformFamily.Windows] = "win-x64",
+    [PlatformFamily.Linux]   = "linux-x64",
+    [PlatformFamily.OSX]     = "osx-x64",
+};
+
+Task("DotNetCore-Publish")
+    .IsDependeeOf("Create-NuGet-Packages")
+    .IsDependentOn("DotNetCore-Test")
+    .Does(() =>
+{
+    foreach(var runtime in NativeRuntimes)
+    {
+        var runtimeName = runtime.Value;
+
+        var settings = new DotNetCorePublishSettings
+        {
+            Framework = "netcoreapp3.1",
+            Runtime = runtimeName,
+            NoRestore = false,
+            Configuration = BuildParameters.Configuration,
+            OutputDirectory = BuildParameters.Paths.Directories.TempBuild.Combine("Native").Combine(runtimeName),
+            MSBuildSettings = new DotNetCoreMSBuildSettings()
+                            .WithProperty("Version", BuildParameters.Version.SemVersion)
+                            .WithProperty("AssemblyVersion", BuildParameters.Version.Version)
+                            .WithProperty("FileVersion",  BuildParameters.Version.Version)
+                            .WithProperty("AssemblyInformationalVersion", BuildParameters.Version.InformationalVersion)
+        };
+
+        settings.ArgumentCustomization =
+            arg => arg
+            .Append("/p:PublishTrimmed=true");
+
+        DotNetCorePublish(BuildParameters.SolutionFilePath.FullPath, settings);
+    }
+});
+
+
+
 Build.RunDotNetCore();
