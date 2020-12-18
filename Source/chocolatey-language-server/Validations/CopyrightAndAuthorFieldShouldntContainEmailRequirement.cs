@@ -21,7 +21,7 @@ namespace Chocolatey.Language.Server.Validations
         {
             get
             {
-                return "choco0005";
+                return "cpmr0020";
             }
         }
 

@@ -13,7 +13,7 @@ namespace Chocolatey.Language.Server.Validations
     {
         private const string VALIDATION_MESSAGE = "The package id contains underscores (_). Usually the package id is separated by '-' instead of underscores. Please change the underscores to '-' if this is a new package.";
 
-        public override string Id => "choco3001";
+        public override string Id => "cpmr0070";
 
         public override ValidationType ValidationType => ValidationType.Note;
 

@@ -13,7 +13,7 @@ namespace Chocolatey.Language.Server.Validations
     {
         private const string VALIDATION_MESSAGE = "The package id includes a prerelease version name which should be included only in the version of the package.";
 
-        public override string Id => "choco0010";
+        public override string Id => "cpmr0024";
 
         public override ValidationType ValidationType => ValidationType.Requirement;
 

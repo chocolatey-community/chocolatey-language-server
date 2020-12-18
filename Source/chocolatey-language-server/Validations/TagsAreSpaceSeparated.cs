@@ -14,7 +14,7 @@ namespace Chocolatey.Language.Server.Validations
     {
         private const string VALIDATION_MESSAGE = "Tags (tags) are space separated values for referencing categories for software. Please don't use comma to separate tags.";
 
-        public override string Id => "choco0012";
+        public override string Id => "cpmr0014";
 
         public override ValidationType ValidationType => ValidationType.Requirement;
 

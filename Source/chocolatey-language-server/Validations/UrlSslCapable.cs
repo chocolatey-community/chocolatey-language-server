@@ -34,7 +34,7 @@ namespace Chocolatey.Language.Server.Validations
         {
             get
             {
-                return "choco1002";
+                return ""; /// no page for this on docs
             }
         }
 

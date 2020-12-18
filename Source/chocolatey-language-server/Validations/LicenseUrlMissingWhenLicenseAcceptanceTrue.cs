@@ -14,7 +14,7 @@ namespace Chocolatey.Language.Server.Validations
     {
         private const string VALIDATION_MESSAGE = "A licenseUrl must bet set when requireLicenseAcceptance is true.";
 
-        public override string Id => "choco0008";
+        public override string Id => "cpmr0007";
 
         public override ValidationType ValidationType => ValidationType.Requirement;
 
