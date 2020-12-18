@@ -16,7 +16,7 @@ namespace Chocolatey.Language.Server.Validations
         private const string VALIDATION_MESSAGE = "Tags (tags) are space separated values for referencing categories for software. " +
                                                   "Please include tags in the nuspec as space separated values";
 
-        public override string Id => "choco0013";
+        public override string Id => "cpmr0023";
 
         public override ValidationType ValidationType => ValidationType.Requirement;
 

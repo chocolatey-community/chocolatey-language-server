@@ -18,7 +18,7 @@ namespace Chocolatey.Language.Server.Validations
         /// <summary>
         /// Gets the string Id for the rule, similar to CHOCO0001
         /// </summary>
-        public override string Id => "choco3002";
+        public override string Id => "cpmr0068";
 
         /// <inheritdoc />
         /// <summary>

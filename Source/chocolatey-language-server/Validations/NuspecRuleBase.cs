@@ -19,7 +19,7 @@ namespace Chocolatey.Language.Server.Validations
         /// <summary>
         /// Gets the documentation Url for the rule
         /// </summary>
-        public virtual string DocumentationUrl => $"https://gep13.github.io/chocolatey-vscode/docs/rules/{Id}";
+        public virtual string DocumentationUrl => $"https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/{Id}";
 
         /// <summary>
         /// Gets the type of of validation

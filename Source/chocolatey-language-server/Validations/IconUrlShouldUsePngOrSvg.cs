@@ -19,7 +19,7 @@ namespace Chocolatey.Language.Server.Validations
     {
         private const string VALIDATION_MESSAGE = "As per the packaging guidelines, icons should be either a png or svg file.";
 
-        public override string Id => "choco2002";
+        public override string Id => "cpmr0058";
 
         public override ValidationType ValidationType => ValidationType.Suggestion;
 
