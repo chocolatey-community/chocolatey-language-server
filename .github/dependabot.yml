@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: nuget
+  directory: "/Source"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  labels:
+  - Improvement
+  ignore:
+  - dependency-name: OmniSharp.Extensions.LanguageServer
+    versions:
+    - 0.18.3
+    - 0.19.0
+  - dependency-name: Serilog.Sinks.Seq
+    versions:
+    - 5.0.0
